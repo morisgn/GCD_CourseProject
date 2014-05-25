@@ -91,7 +91,7 @@ write.table(processed.data, file = "processed_data.txt", sep= ",", row.names=FAL
 ##################################################
 
 # variable measurements on the mean and standard deviation  
-mean.stdCol <- grepl("mean", features.names, ignore.case=FALSE, fixed= TRUE) | (grepl("std", features.names) )
+mean.stdCol <- grepl("mean()", features.names, ignore.case=FALSE, fixed= TRUE) | (grepl("std()", features.names) )
 mean.stdCol <- features.names [mean.stdCol]
 
 # Create the header for the tidy data 
@@ -114,7 +114,6 @@ tidyData.colNames <- gsub("Mag","Magnitude",tidyData.colNames,fixed= TRUE)
 tidyData.colNames <- gsub("tBody","TimeBody",tidyData.colNames,fixed= TRUE)
 tidyData.colNames <- gsub("tGravity","TimeGravity",tidyData.colNames,fixed= TRUE)
 tidyData.colNames <- gsub("fBody","FrequencyBody",tidyData.colNames,fixed= TRUE)
-tidyData.colNames <- gsub("-meanFreq()","MeanFrequence",tidyData.colNames,fixed= TRUE)
 tidyData.colNames <- gsub("-X","X",tidyData.colNames,fixed= TRUE)
 tidyData.colNames <- gsub("-Y","Y",tidyData.colNames,fixed= TRUE)
 tidyData.colNames <- gsub("-Z","Z",tidyData.colNames,fixed= TRUE)
@@ -123,11 +122,8 @@ names (tidy.data) <- tidyData.colNames
 
 # load plyr and cumpute the average of each variable for each activity and each subject
 library("plyr")
-activity.subjectAVG <- ddply(tidy.data, .(subject =tidy.data$subject, activity= tidy.data$activity), numcolwise(mean))
+tidy.data <- ddply(tidy.data, .(subject =tidy.data$subject, activity= tidy.data$activity), numcolwise(mean))
 
-# Remove  the activity and subject variables from the second tidy data 
-
-tidy.data<- activity.subjectAVG [, -c (1,2)]
 
 # Write the second tidy data in a text file
 write.table(tidy.data, file = "tidy_data.txt", sep= ",", row.names=FALSE)
