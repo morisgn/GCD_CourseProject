@@ -26,9 +26,9 @@ Microsoft Windows 7, R version 3.1.0, RStudio version 0.98.507
 
 Content of this repository
 --------------------------
-This repository contains the following files : 
-README.md : To explain the purpose of the project and all of its components.  
-CodeBook.md : Include information about the variables, the summary choices I made and the experimental study design used.   
+This repository contains the following files :    
+README.md : To explain the purpose of the project and all of its components.     
+CodeBook.md : Include information about the variables, the summary choices I made and the experimental study design used.      
 run_analysis.R : A R script that can be used to reproduce the tidy data.
 
 
