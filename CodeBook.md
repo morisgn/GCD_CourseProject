@@ -115,7 +115,7 @@ __dowloaded.date__ : "Sun May 18 06:30:08 2014"
 * Create the header for the tidy data 
 * Appropriately labels the data set with descriptive activity names by using gsub
 
-# Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+### Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 * Use plyr library 
 * cumpute the average of each variable for each activity and each subject by using ddply
