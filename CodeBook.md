@@ -70,7 +70,7 @@ Raw data are transformed to processed data that are used to produce the tidy dat
 [61] "FrequencyBodyAccelerometerMagnitudeMean"                     
 [62] "FrequencyBodyAccelerometerMagnitudeStandarddeviation"        
 [63] "FrequencyBodyBodyAccelerometerJerkMagnitudeMean"             
-[64] "FrequencyBodyBodyAccelerometerJerkMagnitudeStandarddeviation"
+[64] "FrequencyBodyBodyAccelerometerJerkMagnitudeStandarddeviation"  
 [65] "FrequencyBodyBodyGyroscopeMagnitudeMean"                     
 [66] "FrequencyBodyBodyGyroscopeMagnitudeStandarddeviation"        
 [67] "FrequencyBodyBodyGyroscopeJerkMagnitudeMean"                 
